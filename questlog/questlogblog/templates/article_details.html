@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<h1>{{ post.title }}</h1>
+<hr>
+<br>
+<p>{{ post.body }}</p>
+<hr>
+<br>
+<small> Posted By: {{ post.author.first_name }}  {{ post.author.last_name }}</small>
+
+<br/><br/>
+<a href="{% url 'home' %}">Back</a>
+
+{% endblock %}

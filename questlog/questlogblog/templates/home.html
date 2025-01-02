@@ -1,1 +1,11 @@
-<h1>Hello!</h1>
+<h1>Post</h1>
+
+<ul>
+{% for p in object_list %}
+   <li> 
+    {{ p.title }} <br>
+    {{ p.body }} <br>
+    {{ p.author }} <br>
+</li>
+{% endfor %}
+</ul>

@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-^t=3m9p)u5qzu@^y*k4f42yzkgwe+t8u1@v((u69ymex558pj0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-rhys1558-questlog-yz1zis2r8r1.ws-eu117.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-rhys1558-questlog-yz1zis2r8r1.ws-eu117.gitpod.io']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-rhys1558-questlog-yz1zis2r8r1.ws-eu117.gitpod.io',  # Add your Gitpod URL here
+]
 
 
 # Application definition
@@ -37,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'questlogblog',
 ]
 
 MIDDLEWARE = [

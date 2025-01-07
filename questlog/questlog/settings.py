@@ -28,9 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-rhys1558-questlog-b4pjxxrsg1c.ws-eu117.gitpod.io','.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-rhys1558-questlog-yz1zis2r8r1.ws-eu117.gitpod.io',  # Add your Gitpod URL here
+    'https://8000-rhys1558-questlog-b4pjxxrsg1c.ws-eu117.gitpod.io',  # Add your Gitpod URL here
 ]
-
 
 # Application definition
 

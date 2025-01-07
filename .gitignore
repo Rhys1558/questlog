@@ -1,0 +1,43 @@
+# Compiled Python files
+*.py[cod]
+__pycache__/
+
+# Environment and virtual environment
+*.env
+.env
+venv*
+.tox
+
+# Build and distribution
+*.egg-info
+.eggs/
+build/
+dist/
+
+# Documentation build artifacts
+docs/_build/
+docs/_static/
+
+# IDE/Editor settings
+.idea/
+
+# Coverage and cache
+htmlcov/
+.coverage
+.cache/
+.mypy_cache/
+.pytest_cache/
+
+# Backup and temporary files
+*.bak
+*.swp
+*.swo
+
+# SQLite database
+*.sqlite3
+
+# Operating system files
+.DS_Store
+
+# Django-related
+django-sample-app*/  # Consider removing if irrelevant

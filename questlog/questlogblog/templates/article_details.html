@@ -12,10 +12,13 @@
 <hr>
 <br>
 <p>{{ post.body }}</p>
-<hr>
 <br>
-<small> Posted By: {{ post.author.first_name }}  {{ post.author.last_name }}</small>
-<br/><br/>
+<hr>
+<small> Posted by: {{ post.author.first_name }}  {{ post.author.last_name }}</small>
+<br>
+<small>Post on: {{ post.date_of_post }} </small>
+<br>
+<br>
 <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a> 
 <a href="{% url 'edit_post' post.pk %}" class="btn btn-primary btn-sm">Edit</a>
 {% endblock %}

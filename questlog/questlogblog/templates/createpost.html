@@ -15,12 +15,12 @@
             {% csrf_token %}
             {{ form.as_p }}
             <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
-            <button class="btn btn-primary btn-sm">Post Blog</button>
+            <button class="btn btn-primary btn-sm">Post Blog</button> 
     </div>
 
 {% else %}
 
-Please login first before trying to crate posts!
+Please login first before trying to create posts!
 
 {% endif %}
 

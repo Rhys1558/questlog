@@ -19,7 +19,7 @@ class ArticleDetails(DetailView):
 class NewPost(CreateView):
     model = Post
     form_class = Forms
-    template_name = "cratepost.html"
+    template_name = "createpost.html"
     #fields = ("title", "body", "author")
 
 class EditPost(UpdateView):

@@ -6,15 +6,22 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 
-<h1>New Post</h1>
-<div class="form-group">
-    <form method="Post">
-        <!-- Protects user post -->
-        {% csrf_token %}
-        {{ form.as_p }}
-        <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
-        <button class="btn btn-primary btn-sm">Post Blog</button>
-</div>
+    <h1>New Post</h1>
+    <div class="form-group">
+        <form method="Post">
+            <!-- Protects user post -->
+            {% csrf_token %}
+            {{ form.as_p }}
+            <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
+            <button class="btn btn-primary btn-sm">Post Blog</button>
+    </div>
+
+{% else %}
+
+Please login first before trying to crate posts!
+
+{% endif %}
 
 {% endblock %}

@@ -6,16 +6,23 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 
-<h1>Edit Post</h1>
-<div class="form-group">
-    <form method="Post">
-        <!-- Protects user post -->
-        {% csrf_token %}
-        {{ form.as_p }}
-        <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
-        <a href="{% url 'delete_post' post.pk %}" class="btn btn-primary me-2 btn-sm">Delete Post</a>
-        <button class="btn btn-primary btn-sm">Update Post</button>
-</div>
+    <h1>Edit Post</h1>
+    <div class="form-group">
+        <form method="Post">
+            <!-- Protects user post -->
+            {% csrf_token %}
+            {{ form.as_p }}
+            <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
+            <a href="{% url 'delete_post' post.pk %}" class="btn btn-primary me-2 btn-sm">Delete Post</a>
+            <button class="btn btn-primary btn-sm">Update Post</button>
+    </div>
+
+{% else %}
+
+Please login first before trying to edit posts!
+
+{% endif %}
 
 {% endblock %}

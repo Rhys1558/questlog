@@ -6,19 +6,27 @@
 
 {% block content %}
 
-<h1>Delete Post</h1>
-<br>
-<h3>{{ post.title }}</h3>
-<br>
+{% if user.is_authenticated %}
 
-<div class="form-group">
-    <form method="Post">
-        <!-- Protects user post -->
-        {% csrf_token %}
-        <strong>This post will be deleted!</strong>
-        <br><br>
-        <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
-        <button class="btn btn-primary btn-sm">Delete Post</button>
-</div>
+    <h1>Delete Post</h1>
+    <br>
+    <h3>{{ post.title }}</h3>
+    <br>
+
+    <div class="form-group">
+        <form method="Post">
+            <!-- Protects user post -->
+            {% csrf_token %}
+            <strong>This post will be deleted!</strong>
+            <br><br>
+            <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
+            <button class="btn btn-primary btn-sm">Delete Post</button>
+    </div>
+
+{% else %}
+
+Please login first before trying to delete posts!
+
+{% endif %}
 
 {% endblock %}

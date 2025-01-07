@@ -11,7 +11,7 @@
 {% for p in object_list %}
    <li> 
     <a href="{% url 'article_details' p.pk %}">{{ p.title }}</a> <br>
-    {{ p.body }} <br>
+    {{ p.body|truncatewords:20 }} <br>
     <small>{{ p.author.first_name }}
     {{ p.author.last_name }} 
     <br>
@@ -19,8 +19,12 @@
     </small> 
     <br>
     <br>
-    <a href="{% url 'edit_post' p.pk %}" class="btn btn-primary me-2 btn-sm">Edit</a>
-    <a href="{% url 'delete_post' p.pk %}" class="btn btn-primary me-2 btn-sm">Delete</a>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'edit_post' p.pk %}" class="btn btn-primary me-2 btn-sm">Edit</a>
+        <a href="{% url 'delete_post' p.pk %}" class="btn btn-primary me-2 btn-sm">Delete</a>
+    {% endif %}
+
     <br> <br>
 </li>
 {% endfor %}

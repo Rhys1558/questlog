@@ -4,4 +4,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("questlogblog.urls")),
+    path("members_authentication/", include("django.contrib.auth.urls")),
+    path("members_authentication/", include("members_authentication.urls")),
 ]

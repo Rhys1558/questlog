@@ -13,7 +13,8 @@
     <a href="{% url 'article_details' p.pk %}">{{ p.title }}</a> <br>
     {{ p.body }} <br>
     {{ p.author.first_name }} <br>
-    {{ p.author.last_name }} <br> <br>
+    {{ p.author.last_name }} <br>
+    <small><a href="{% url 'edit_post' p.pk %}" class="btn btn-primary btn-sm">Edit</a></small>   <br> <br>
 </li>
 {% endfor %}
 </ul>

@@ -14,7 +14,9 @@
     {{ p.body }} <br>
     {{ p.author.first_name }} <br>
     {{ p.author.last_name }} <br>
-    <small><a href="{% url 'edit_post' p.pk %}" class="btn btn-primary btn-sm">Edit</a></small>   <br> <br>
+    <a href="{% url 'edit_post' p.pk %}" class="btn btn-primary me-2 btn-sm">Edit</a>
+    <a href="{% url 'delete_post' p.pk %}" class="btn btn-primary me-2 btn-sm">Delete</a>
+    <br> <br>
 </li>
 {% endfor %}
 </ul>

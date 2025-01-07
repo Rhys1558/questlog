@@ -1,20 +1,24 @@
 {% extends "base.html" %}
 
 {% block blogtitle %}
-    New Post
+    Delete Post
 {% endblock %}
 
 {% block content %}
 
+<h1>Delete Post</h1>
+<br>
+<h3>{{ post.title }}</h3>
+<br>
 
-<h1>New Post</h1>
 <div class="form-group">
     <form method="Post">
         <!-- Protects user post -->
         {% csrf_token %}
-        {{ form.as_p }}
+        <strong>This post will be deleted!</strong>
+        <br><br>
         <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
-        <button class="btn btn-primary btn-sm">Post Blog</button>
+        <button class="btn btn-primary btn-sm">Delete Post</button>
 </div>
 
 {% endblock %}

@@ -16,6 +16,6 @@
 <br>
 <small> Posted By: {{ post.author.first_name }}  {{ post.author.last_name }}</small>
 <br/><br/>
-<small><a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a></small> 
-<small><a href="{% url 'edit_post' post.pk %}" class="btn btn-primary btn-sm">Edit</a></small>
+<a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a> 
+<a href="{% url 'edit_post' post.pk %}" class="btn btn-primary btn-sm">Edit</a>
 {% endblock %}

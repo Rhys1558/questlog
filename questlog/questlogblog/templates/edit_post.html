@@ -13,7 +13,8 @@
         <!-- Protects user post -->
         {% csrf_token %}
         {{ form.as_p }}
-        <a href="{% url 'home' %}" class="btn btn-primary btn-sm">Back</a>
+        <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
+        <a href="{% url 'delete_post' post.pk %}" class="btn btn-primary me-2 btn-sm">Delete Post</a>
         <button class="btn btn-primary btn-sm">Update Post</button>
 </div>
 

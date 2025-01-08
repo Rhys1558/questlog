@@ -23,12 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^t=3m9p)u5qzu@^y*k4f42yzkgwe+t8u1@v((u69ymex558pj0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-rhys1558-questlog-b4pjxxrsg1c.ws-eu117.gitpod.io','https://questlogblog-f9cc221a2c54.herokuapp.com/']
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-rhys1558-questlog-eoyirw6ozhz.ws-eu117.gitpod.io']
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-rhys1558-questlog-b4pjxxrsg1c.ws-eu117.gitpod.io',  # Add your Gitpod URL here
+    'https://8000-rhys1558-questlog-eoyirw6ozhz.ws-eu117.gitpod.io',  # Add your Gitpod URL here
 ]
 
 # Application definition
@@ -122,11 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-    ]
-    
-STATIC_ROOT = BASE_DIR / "staticfiles"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

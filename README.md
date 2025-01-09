@@ -1,8 +1,6 @@
 # Quest Log Blog
 Quest Log Blog is a website that allows video game lovers to create blog posts about their favourite video games. They can let other users know their impressions and opinions of therir favourite video games, what they like and dislike about the games, and give other game recommendations based on their preferred style of game. This website is targeted towards video game lovers of all different types of games, giving them a space to view the opinions of like minded individuals with similiar interests.
 
-![Screenshot](../questlog/readme-images/homepage.png)
-
 ## Features
 
 ### Navigation Bar
@@ -16,7 +14,6 @@ Quest Log Blog is a website that allows video game lovers to create blog posts a
 
 
 #### When Logged In
-(picture of nav bar when logged in)
     
  - 'New Post' allows the user to create a new post that is displayed to the homepage of the wedsite, which other users can view.
  - 
@@ -24,7 +21,6 @@ Quest Log Blog is a website that allows video game lovers to create blog posts a
     - This allows user to log out when they are logged in.
     
 #### When Logged Out
-(picture of nav bar when logged out)
 - Register
     - This allows the user to create a new account and start creating posts about their favourte games for other users to see.
 
@@ -51,7 +47,6 @@ Quest Log Blog is a website that allows video game lovers to create blog posts a
  - The 'Back' button, when clicked, brings the user back to the homepage of the website.
    
  - The 'Edit' button, when clicked, allows the user to edit or delete the current post.
-   (picture of this page)
 
  ## Footer
  - This has the copyright of the name Quest Log Blog 
@@ -79,11 +74,7 @@ Quest Log Blog is a website that allows video game lovers to create blog posts a
 - Log Out
     - I clicked on log out to see if it would sign me out.
 - Register
-    - I clicked on this to see if it brough me to the register form'
-
-## Validation Testing
-- ??
-
+    - I clicked on this to see if it brough me to the register form
 ## Deployment
 I deployed the website by logging into heroku, then in github I made a procfile with web: gunicorn my_project.wsgi inside it.
 I then went to setting.py and turned debug to Flase.

@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^t=3m9p)u5qzu@^y*k4f42yzkgwe+t8u1@v((u69ymex558pj0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-rhys1558-questlog-eoyirw6ozhz.ws-eu117.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-rhys1558-questlog-eoyirw6ozhz.ws-eu117.gitpod.io', 'questlogblog.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-rhys1558-questlog-eoyirw6ozhz.ws-eu117.gitpod.io',  # Add your Gitpod URL here
 ]

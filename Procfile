@@ -1,1 +1,1 @@
-web: gunicorn questlogblog.wsgi:application
+web: gunicorn questlogblog.wsgi

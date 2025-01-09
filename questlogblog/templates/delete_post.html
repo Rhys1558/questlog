@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block blogtitle %}
-    Delete Post
+    <h1>Delete Post</h1>
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,9 @@
         <form method="Post">
             <!-- Protects user post -->
             {% csrf_token %}
-            <strong>This post will be deleted!</strong>
+            <strong>This post will be deleted!</strong> 
+            <br>
+            <strong>are you sure you want to delete this blog?</strong>
             <br><br>
             <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
             <button class="btn btn-primary btn-sm">Delete Post</button>
@@ -25,7 +27,7 @@
 
 {% else %}
 
-Please login first before trying to delete posts!
+<p>Please login first before trying to delete posts!</p>
 
 {% endif %}
 

@@ -13,7 +13,7 @@
 
     <title>
       {% block blogtitle %}
-        Quest Log Blog
+        <h1>Quest Log Blog</h1>
       {% endblock %}
     </title>
   </head>
@@ -33,9 +33,7 @@
 
             {% if user.is_authenticated %}
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Post
-              </a>
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Post</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{% url 'NewPost' %}">New Post</a></li>
                 <li><a class="dropdown-item" href="#">Edit Post</a></li>

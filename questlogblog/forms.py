@@ -5,6 +5,7 @@ class Forms(forms.ModelForm):
     class Meta:
         model = Post
         fields = ("title", "body", "author")
+
         # bootstraps form control css style for the forms
         widgets = {
             "title": forms.TextInput(attrs={"class": "form-control", "placeholder": "Title"}),

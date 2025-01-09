@@ -10,13 +10,19 @@
 
     <h1>New Post</h1>
     <div class="form-group">
-        <form method="Post">
+        <form method="post">
             <!-- Protects user post -->
             {% csrf_token %}
             {{ form.as_p }}
             <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
             <button class="btn btn-primary btn-sm">Post Blog</button>
     </div>
+
+    <script>
+        var authorId = "{{ user.id }}";
+        document.getElementById("post_author").value = authorId;
+    </script>
+
 
 {% else %}
 

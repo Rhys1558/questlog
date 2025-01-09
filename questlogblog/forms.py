@@ -10,7 +10,7 @@ class Forms(forms.ModelForm):
         widgets = {
             "title": forms.TextInput(attrs={"class": "form-control", "placeholder": "Title"}),
             "body": forms.Textarea(attrs={"class": "form-control", "placeholder": "Your Blog"}),
-            "author": forms.Select(attrs={"class": "form-control"}),
+            "author": forms.TextInput(attrs={"class": "form-control", "value":"", "id":"post_author", "type":"hidden"}),
         }
 
 class EditForms(forms.ModelForm):
@@ -22,3 +22,4 @@ class EditForms(forms.ModelForm):
             "title": forms.TextInput(attrs={"class": "form-control", "placeholder": "Title"}),
             "body": forms.Textarea(attrs={"class": "form-control", "placeholder": "Your Blog"}),
         }
+

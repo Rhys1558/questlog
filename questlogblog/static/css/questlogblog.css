@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+
+}
+
+.buttons-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px; 
+  justify-items: left;
+  align-items: center; 
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  color: white;
+  background-color: #0D6EFD;
+  text-align: center;
+  padding: 10px 0;
+}

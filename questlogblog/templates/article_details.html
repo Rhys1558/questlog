@@ -24,9 +24,27 @@
     <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a> 
 
     {% if user.id == post.author.id %} 
-            <a href="{% url 'edit_post' post.pk %}" class="btn btn-primary btn-sm">Edit</a>
-    {% endif %}
+        <a href="{% url 'edit_post' post.pk %}" class="btn btn-primary btn-sm">Edit</a>
 
+    {% else %}
+        <br>
+        <br>
+        <div class="buttons-grid-container">
+            <form action="{% url 'like_post' post.pk %}"
+            method="POST">
+                {% csrf_token %}
+                <button type="submit", name="post_id", value="{{ post.id }}" 
+                class="btn btn-primary me-1 btn-sm likes-grid-container">Like: {{ total_likes }}</button>
+            </form>
+            <form action="{% url 'dislike_post' post.pk %}"
+            method="POST">
+                {% csrf_token %}
+                <button type="submit", name="post_id", value="{{ post.id }}" 
+                class="btn btn-primary me-1 btn-sm dislike-grid-container">Dislike: {{ total_dislikes }}</button>
+            </form>
+        </div>
+    {% endif %}
+       
 {% endif %}
 
 {% endblock %}

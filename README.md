@@ -1,7 +1,7 @@
 # Quest Log Blog
 Quest Log Blog is a website that allows video game lovers to create blog posts about their favourite video games. They can let other users know their impressions and opinions of therir favourite video games, what they like and dislike about the games, and give other game recommendations based on their preferred style of game. This website is targeted towards video game lovers of all different types of games, giving them a space to view the opinions of like minded individuals with similiar interests.
 
-(picture of website)
+![Screenshot](../questlog/readme-images/homepage.png)
 
 ## Features
 
@@ -9,11 +9,11 @@ Quest Log Blog is a website that allows video game lovers to create blog posts a
 
 - Logo
     - The logo when clicked allows the user to return to the homepage.
-    (picture of logo)
+    
 
 - Home
     - This element when clicked brings the user back to the homepage.
-    (picture of home button)
+
 
 #### When Logged In
 (picture of nav bar when logged in)

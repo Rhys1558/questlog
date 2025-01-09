@@ -58,12 +58,16 @@ Quest Log Blog is a website that allows video game lovers to create blog posts a
 
  ## Forms
  - Registration Form
+    - This form allows the user to register an account.
    
  - Log In Page Form
+    - This form allows the user to log in.
    
  - Creat New Blog Form
+    - This form allows the user to create a new post.
    
  - Edit Blog Form
+    -This form allows the user to edit their post 
 
 ## Manual Testing
 - logo
@@ -81,7 +85,13 @@ Quest Log Blog is a website that allows video game lovers to create blog posts a
 - ??
 
 ## Deployment
-
+I deployed the website by logging into heroku, then in github I made a procfile with web: gunicorn my_project.wsgi inside it.
+I then went to setting.py and turned debug to Flase.
+I went to allow hosts and put '.herokuapp.com'.
+I then commit and pushed the changes to github'
+I then went to the deploy tab in heroku and then in the deployment method section I enable GitHub integration by clicking on Connect to GitHub.
+I then give heroku my github repo name.
+I then clicked deploy branch.
 
 ## Credits
 

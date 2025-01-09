@@ -17,16 +17,9 @@ Quest Log Blog is a website that allows video game lovers to create blog posts a
 
 #### When Logged In
 (picture of nav bar when logged in)
-
-- Post Drop Down Menu
-    (picture of post drop down menu)
-    - When 'Post' in the navigation bar is clicked, it opens a drop down menu which gives the user two options: 'New Post' and 'Edit Post'
-    (picture of post drop down when clicked)
     
-    - 'New Post' allows the user to create a new post that is displayed to the homepage of the wedsite, which other users can view.
-
-    - 'Edit Post' allows the user to edit their posts. This feature can be useful if the user made a mistake or may just want to change something in the post.
-
+ - 'New Post' allows the user to create a new post that is displayed to the homepage of the wedsite, which other users can view.
+ - 
 - Log Out
     - This allows user to log out when they are logged in.
     
@@ -73,14 +66,24 @@ Quest Log Blog is a website that allows video game lovers to create blog posts a
  - Edit Blog Form
 
 ## Manual Testing
-- ??
+- logo
+   - I manually tested the logo to check and see if it sent me back to the home.
+- Home
+    - I checked to see if home in the nav bar brough me back to the home page.
+- New Post
+    - I clicked on the new post button to see if it brough me to the create new post page.
+- Log Out
+    - I clicked on log out to see if it would sign me out.
+- Register
+    - I clicked on this to see if it brough me to the register form'
 
 ## Validation Testing
 - ??
 
 ## Deployment
-- ??
+
 
 ## Credits
-- ??
+
+https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi
   

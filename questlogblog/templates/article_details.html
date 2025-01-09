@@ -34,13 +34,13 @@
             method="POST">
                 {% csrf_token %}
                 <button type="submit", name="post_id", value="{{ post.id }}" 
-                class="btn btn-primary me-1 btn-sm likes-grid-container">Like: {{ total_likes }}</button>
+                class="btn btn-primary me-1 btn-sm">Like: {{ total_likes }}</button>
             </form>
             <form action="{% url 'dislike_post' post.pk %}"
             method="POST">
                 {% csrf_token %}
                 <button type="submit", name="post_id", value="{{ post.id }}" 
-                class="btn btn-primary me-1 btn-sm dislike-grid-container">Dislike: {{ total_dislikes }}</button>
+                class="btn btn-primary me-1 btn-sm">Dislike: {{ total_dislikes }}</button>
             </form>
         </div>
     {% endif %}

@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^t=3m9p)u5qzu@^y*k4f42yzkgwe+t8u1@v((u69ymex558pj0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "8000-rhys1558-questlog-wlgzan8oybf.ws.codeinstitute-ide.net"]
+DEBUG = False
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "*", "8000-rhys1558-questlog-wlgzan8oybf.ws.codeinstitute-ide.net"]
 #ALLOWED_HOSTS = ['localhost', '127.0.0.1', "*", '8000-rhys1558-questlog-wlgzan8oybf.ws.codeinstitute-ide.net', 
 #'questlogblog-b38167f2f3da.herokuapp.com']
 
@@ -61,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 ROOT_URLCONF = 'questlog.urls'
 
@@ -132,9 +134,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # This points to the entire static directory
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

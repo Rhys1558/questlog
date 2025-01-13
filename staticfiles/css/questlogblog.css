@@ -1,0 +1,24 @@
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  height: 100vh; /* Ensure the body is as tall as the viewport */
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Allows for vertical stacking */
+}
+
+.container {
+  flex-grow: 1; /* Ensures the container takes up remaining vertical space */
+}
+
+footer {
+  background-color: rgb(13, 110, 253);
+  padding: 10px 0;
+  text-align: right; /* Align text to the right */
+  margin-top: auto;
+  color: white; /* Ensure the text color contrasts with the background */
+}
+
+footer #copyright {
+  margin-right: 10px
+}

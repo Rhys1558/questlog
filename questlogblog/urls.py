@@ -10,4 +10,3 @@ urlpatterns = [
     path("like/<int:pk>", Likes, name="like_post"),
     path("dislike/<int:pk>", Dislikes, name="dislike_post"),
 ]
-

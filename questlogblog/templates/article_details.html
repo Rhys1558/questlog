@@ -6,8 +6,6 @@
 
 {% block content %}
 
-
-
 <h1>{{ post.title }}</h1>
 <hr>
 <br>
@@ -25,22 +23,27 @@
 
     {% if user.id == post.author.id %} 
         <a href="{% url 'edit_post' post.pk %}" class="btn btn-primary btn-sm">Edit</a>
-
+        <br><br>
+        <!-- Show the likes and dislikes for the post author -->
+        <div class="buttons-grid-container d-flex">
+            <p class="me-2"><strong>Likes:</strong> {{ total_likes }}</p>
+            <p><strong>Dislikes:</strong> {{ total_dislikes }}</p>
+        </div>
     {% else %}
         <br>
         <br>
-        <div class="buttons-grid-container">
-            <form action="{% url 'like_post' post.pk %}"
-            method="POST">
+        <div class="buttons-grid-container d-flex">
+            <form action="{% url 'like_post' post.pk %}" method="POST">
                 {% csrf_token %}
-                <button type="submit", name="post_id", value="{{ post.id }}" 
-                class="btn btn-primary me-1 btn-sm">Like: {{ total_likes }}</button>
+                <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-primary me-1 btn-sm">
+                    Like: {{ total_likes }}
+                </button>
             </form>
-            <form action="{% url 'dislike_post' post.pk %}"
-            method="POST">
+            <form action="{% url 'dislike_post' post.pk %}" method="POST">
                 {% csrf_token %}
-                <button type="submit", name="post_id", value="{{ post.id }}" 
-                class="btn btn-primary me-1 btn-sm">Dislike: {{ total_dislikes }}</button>
+                <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-primary me-1 btn-sm">
+                    Dislike: {{ total_dislikes }}
+                </button>
             </form>
         </div>
     {% endif %}

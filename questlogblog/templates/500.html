@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block blogtitle %}404{% endblock %}
+{% block blogtitle %}500{% endblock %}
 
 {% block content %}
-<h1>Error 404!</h1>
-<p>Sorry, this page could not be found.</p>
+<h1>Error 500!</h1>
+<p>Sorry, something went wrong. Please try again later.</p>
 <p><a href="{% url 'home' %}">Return to homepage</a></p>
 {% endblock %}

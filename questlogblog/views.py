@@ -4,6 +4,9 @@ from .models import Post
 from .forms import Forms, EditForms
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from django.http import HttpResponseServerError
+import logging
+logger = logging.getLogger(__name__)  
 
 def Likes(request, pk):
     post = get_object_or_404(Post, id=request.POST.get("post_id"))
@@ -48,3 +51,20 @@ class DeletePost(DeleteView):
     model = Post
     template_name = "delete_post.html"
     success_url = reverse_lazy("home")
+
+
+def handler400(request, exception):
+    logger.warning(f"Bad Request (400): {exception}")
+    return render(request, "400.html", {})
+
+def handler403(request, exception):
+    logger.warning(f"Permission Denied (403): {exception}")
+    return render(request, "403.html", {})
+
+def handler404(request, exception):
+    logger.warning(f"Page Not Found (404): {exception}")
+    return render(request, "404.html", {})
+
+def handler500(request, *args, **kwargs):
+    logger.error("Server Error (500)")
+    return render(request, "500.html", {})

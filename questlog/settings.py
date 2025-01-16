@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-^t=3m9p)u5qzu@^y*k4f42yzkgwe+t8u1@v((u69ymex558pj0
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+#ALLOWED_HOSTS = ["*"]
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "*", "8000-rhys1558-questlog-wlgzan8oybf.ws.codeinstitute-ide.net"]
+
 #ALLOWED_HOSTS = ['localhost', '127.0.0.1', "*", '8000-rhys1558-questlog-wlgzan8oybf.ws.codeinstitute-ide.net', 
 #'questlogblog-b38167f2f3da.herokuapp.com']
 
@@ -82,7 +85,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'questlog.wsgi.application'
+WSGI_APPLICATION = 'questlog.wsgi.application'       
+
+# Custom error templates
+DEBUG_PROPAGATE_EXCEPTIONS = False 
 
 
 # Database

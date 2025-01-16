@@ -1,5 +1,9 @@
 from django.urls import path
 from .views import HomeView, ArticleDetails, NewPost, EditPost, DeletePost, Likes, Dislikes
+from django.views.generic import TemplateView
+from django.views.defaults import page_not_found, server_error
+from django.conf.urls import handler400, handler403, handler404, handler500
+
 
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
@@ -10,3 +14,8 @@ urlpatterns = [
     path("like/<int:pk>", Likes, name="like_post"),
     path("dislike/<int:pk>", Dislikes, name="dislike_post"),
 ]
+
+handler400 = "questlogblog.views.handler400"
+handler403 = "questlogblog.views.handler403"
+handler404 = "questlogblog.views.handler404"
+handler500 = "questlogblog.views.handler500"

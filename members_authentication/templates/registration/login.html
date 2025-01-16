@@ -13,7 +13,8 @@
         <!-- Protects user post -->
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="btn btn-primary btn-sm">Login</button>
+        <a href="{% url 'home' %}" class="btn btn-primary me-2 btn-sm">Back</a>
+        <button class="btn btn-primary btn-sm">Log In</button>
 </div>
 
 {% endblock %}
